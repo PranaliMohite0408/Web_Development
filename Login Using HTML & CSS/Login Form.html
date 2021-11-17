@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+       
+        h1 {
+            font-size: 70px;
+            font-style: Bold;
+            color: red;
+            text-align: center;
+
+        }
+
+        label {
+            text-align: center;
+            border: 1px inset #0076ff;
+            border-radius: 5px;
+            background: #428bca;
+            color: #fff;
+            padding-left: 4px;
+            padding-right: 4px;
+            margin-right: 3px;
+            font-size: 40px;
+            font-style: Bold;
+
+        }
+
+        .Username,
+        .Password {
+            text-align: center;
+        }
+
+        .Button {
+            text-align: center;
+            margin-left: 45%;
+        }
+
+        #Username {
+            text-align: left;
+            height: 30px;
+            font-size: 20px;
+            font-style: normal;
+            padding-left: 4px;
+            padding-right: 4px;
+            margin-right: 3px;
+        }
+
+        #Password {
+            text-align: left;
+            height: 30px;
+            font-size: 20px;
+            font-style: normal;
+            padding-left: 4px;
+            padding-right: 4px;
+            margin-right: 3px;
+
+        }
+
+        #Submit {
+            text-align: center;
+            border: 3px inset #ff00bf;
+            border-radius: 5px;
+            background: white;
+            color: black;
+            font-size: 32px;
+            font-weight: bold;
+            min-width: 23;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <form>
+
+        <h1>LOGIN FORM</h1>
+
+        <div class="Username">
+            <label for="Username">Username:</label>
+            <input type="text" maxlength="8" id="Username" name="Username"><br><br><br>
+        </div>
+
+        <div class="Password">
+            <label for="Password">Password:</label>
+            <input type="password" maxlength="8" id="Password" name="Password"><br><br><br><br>
+        </div>
+
+        <span class="Button">
+            <input type="submit" value="LOGIN" id="Submit">
+        </span>
+
+    </form>
+</body>
+
+</html>
