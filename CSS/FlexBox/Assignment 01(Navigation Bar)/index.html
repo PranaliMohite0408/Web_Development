@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+    div{
+        border: 1px solid Red;
+    }
+    #header{   
+        background-color: rgb(241, 88, 88);
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        align-items: center;
+        height: 70px;
+    }
+    h1{
+        color: white;
+        font-style: bold;
+        font-size: 35px;
+    }
+    #nav1{
+        background-color: black;
+        margin: 5px;
+    }
+    #nav1>ul>li a{
+        text-decoration: none;
+        color: white;
+        font-style: bold;
+        font-size: 25px;
+        padding: 5px 20px;
+        border: 1px solid transparent;
+    }
+    #nav1>ul{
+        list-style-type: none;
+    }
+    #nav1>ul>li{
+        display: inline-block;
+    }
+    #nav1>ul>li>a:hover{
+        background-color:orangered;
+        color: white;
+        font-style: bold;
+    }
+
+    #nav2{
+        background-color:#00008B;
+        margin-top: 5px;
+        overflow: auto;
+        padding: 10px;
+    }
+    #nav2>ul>li a{
+        color: white;
+        font-style: bold;
+        font-size: 25px;
+        padding: 5px 20px;
+        margin-bottom: 10px;
+        border: 1px solid transparent;
+        text-decoration: none;
+        list-style-type: none;
+    }
+    #nav2>ul>li{
+        float:left;       
+    }
+    #nav2>ul>li>a:hover{
+        background-color:orangered;
+        color: white;
+        font-style: bold;        
+    }
+    #nav2>ul{
+        list-style-type: none;
+        margin-bottom: 30px;
+    }
+    #nav3{
+        background-color:#006400;
+        margin: 5px;
+    }
+    #nav3>ul>li a{
+        text-decoration: none;
+        color: white;
+        font-style: bold;
+        font-size: 25px;
+        padding: 5px 20px;
+        border: 1px solid transparent;
+    }
+    #nav3>ul{
+        list-style-type: none;
+    }
+    #nav3>ul{
+        display:flex;
+        flex-direction: row;
+    }
+    #nav3>ul>li>a:hover{
+        background-color:orangered;
+        color: white;
+        font-style: bold;
+    }
+
+    </style>
+</head>
+<body>
+        <div id="header"><h1>Navbar Assignment</h1></div>
+        <br>
+        <div id="nav1">
+             <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <br>
+        <div id="nav2">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <br>
+        <div id="nav3">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+</body>
+</html>
