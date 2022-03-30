@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Shop</title>
+    <style>
+        header{
+            background-color:black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        header>h1{
+            color: white;
+            font-size: 40px;
+            font-style: bold;
+        }
+        #container{
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            justify-content: flex-end;          
+        }
+        #container>section{
+            height: 970px;
+            flex-grow: 1;
+            background-color: navy;
+            margin: 0px;
+        }
+        #container>main{
+            height: 100%;
+            flex-grow:6;
+            background-color:antiquewhite;
+        }
+        nav>li{
+            color: white;
+            font-size: 40px;
+            font-style: bold;
+            text-decoration: none;
+            list-style-type: none;
+            padding: 10px;
+            margin: 10px;
+        }
+        main>div{
+            height: 100%;
+            width: 100%;
+        }
+        .items{
+            height: 300px;
+            width: 300px;
+            margin: 10px;
+            border: 2px solid;
+            background-color: white;
+        }
+        .Product{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>MORYA ELECTRONICS</h1></header>
+    <div id="container">
+        <section>
+            <nav>
+                <li>Mobile</li>
+                <li>TV & AV</li>
+                <li>Home Appliances</li>
+                <li>Computer</li>
+                <li>Laptop</li>
+                <li>Watches</li>
+            </nav>
+        </section>
+
+        <main>
+            <div class="Product">
+                <div class="items">
+                    <img src="Images/mobile.jpg" height="300px" width="300px" alt="Mobile">
+                </div>
+                <div class="items">
+                    <img src="Images/laptop.jpg" height="300px" width="300px" alt="Laptop">
+                </div>
+                <div class="items">
+                    <img src="Images/ipad.jpg" height="300px" width="300px" alt="ipad">
+                </div>                
+                <div class="items">
+                    <img src="Images/watch.jpg" height="300px" width="300px" alt="Watch">
+                </div>
+            </div>
+            <div class="Product">
+                <div class="items">
+                    <img src="Images/camera.jpg" height="300px" width="300px" alt="camera">
+                </div>
+                <div class="items">
+                    <img src="Images/tv.jpg" height="300px" width="300px" alt="TV">
+                </div>
+                <div class="items">
+                    <img src="Images/WATCH (2).jpg" height="300px" width="300px" alt="Watch">
+                </div>
+                <div class="items">
+                    <img src="Images/Fridge_01.jpg" height="300px" width="300px" alt="fridge">
+                </div>
+            </div>
+            <div class="Product">
+                <div class="items">
+                    <img src="Images/washing machin.jpg" height="300px" width="300px" alt="Washing Machine">
+                </div>
+                <div class="items">
+                    <img src="Images/C_Fan.jpg" height="300px" width="300px" alt="Fan">
+                </div>
+                <div class="items">
+                    <img src="Images/cooler.png" height="300px" width="300px" alt="Cooler">
+                </div>
+                <div class="items">
+                    <img src="Images/T_Fan.jpg" height="300px" width="300px" alt="Fan">
+                </div>
+            </div>
+        </main>
+
+    </div>
+</body>
+</html>
