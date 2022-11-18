@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 01 using Without Flex</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color:rgb(253, 226, 226);
+        }
+        #nav{
+            margin:5px;
+            padding:5px;
+            display: grid;
+            gap: 1rem;
+            grid-auto-flow: column;
+            background-color: rgba(128, 128, 128, 0.553);
+        }
+        .logo,.navbar{
+           
+            margin:10px;
+            padding:10px;
+        }
+        .logo
+        {
+            
+            margin-left: 40px;
+            border: 2px solid black;
+        }
+        
+        ul>li>a{
+            text-decoration: none;
+            color: black;
+            font-style: bold;
+            font-size: 30px;
+            margin: 20px;
+            padding: 5px 20px;
+            border: 1px solid transparent;
+            
+        }
+        .navbar>ul{
+            list-style-type: none;
+            display: grid;
+            gap: 1rem;
+            grid-auto-flow: column;
+            justify-content: end;
+            
+        }
+        #main{
+            display: grid;
+            gap: 1rem;
+            grid-auto-flow: column;
+            margin: 5px;
+            padding:5px;
+        }
+        .div1, .div2{
+            margin: 10px;
+            padding:20px;
+        }
+        
+        .img{
+            margin: 20px;
+            padding:20px;
+            height: 250px;
+            width: 700px;
+            background-color: rgb(177, 163, 163);
+            
+        }
+        h2{
+            font-size:20px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .tagline{
+            margin: 5px;
+            padding: 5px;
+            margin-top: 10px;
+        }
+        h3{
+            margin-top: 0px;
+            margin-left:50px;
+            padding: 10px;
+            font-size: 30px;
+        }
+        .event{
+            display: grid;
+            gap: 1rem;
+            grid-auto-flow: column;
+            margin: 20px;
+        }
+        .date{
+            background-color:rgba(128, 128, 128, 0.742);
+            
+        }
+        .time{
+            background-color:rgba(128, 128, 128, 0.333);
+            
+        }
+        p{
+            font-size: 30px;
+            text-align: center;
+        }
+        .container1, .container2{
+            margin:5px;
+            padding:5px;
+            
+        }
+        
+        .container1{
+            text-align: center;
+            height: 300px;
+            width: 450px;
+            background-color: rgba(128, 128, 128, 0.543);
+        }
+        
+        .demo{
+            display: grid;
+            gap: 1rem;
+            grid-auto-flow: column;
+        }
+        
+        .demo>div>p{
+            font-size: 20px;
+            text-align: center;
+        }
+        .container2>.demo>.para{
+            margin-left: 30px;
+        }
+        #footer{
+            margin: 20px;
+            padding:20px;
+            background-color: rgba(118, 94, 94, 0.598);
+        }
+        #footer>h3{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div id="nav">
+            <div class="logo"><h2>Logo</h2></div>
+             <div class="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+             </div>
+        </div>
+    </section>
+
+    <main id="main">
+        <div class="div1">
+            <div class="img">
+                <h2>Image of Steave Job</h3>
+            </div>
+            <div class="tagline">
+                <h3>Tag Line of Steave Job</h2>
+                <div class="event">
+                    <div class="date"><p>Date And Year</p></div>
+                    <div class="time"><p>Event Occured At That Time</p></div>         
+                </div>
+                <div class="event">
+                    <div class="date"><p>Date And Year</p></div>
+                    <div class="time"><p>Event Occured At That Time</p></div>         
+                </div>
+                <div class="event">
+                    <div class="date"><p>Date And Year</p></div>
+                    <div class="time"><p>Event Occured At That Time</p></div>         
+                </div>
+                <div class="event">
+                    <div class="date"><p>Date And Year</p></div>
+                    <div class="time"><p>Event Occured At That Time</p></div>         
+                </div>
+                <div class="event">
+                    <div class="date"><p>Date And Year</p></div>
+                    <div class="time"><p>Event Occured At That Time</p></div>         
+                </div>
+            </div>
+            <div id="footer">
+                <h3>Any Quotes of Steave Job</h3>
+            </div>
+        </div>  
+        <div class="div2">
+            <div class="container1">
+                <h1>Image of Steave Job</h1>
+            </div>
+            <div>
+                <div class="container2">
+                    <div class="demo">
+                        <div class=""><p><b>Born</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></div>
+                        <div class="para"><p>Lorem ipsum dolor sit amet.<br><u>Lorem ipsum dolor sit amet.</u></p></div>  
+                    </div>
+                    <div class="demo">
+                        <div><p><b>Died</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></div>
+                        <div class="para"><p>Lorem ipsum dolor sit amet.<br><u>Lorem ipsum dolor sit amet.</u></p></div>  
+                    </div>
+                    <div class="demo">
+                        <div class=""><p><b>Occupation</b></p></div>
+                        <div class="para"><p>Lorem ipsum dolor sit amet.<br><u>Lorem ipsum dolor sit amet.</u></u></p></div>  
+                    </div>
+                    <div class="demo">
+                        <div class=""><p><b>Parents</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></div>
+                        <div class="para"><p>Lorem ipsum dolor sit amet.<br><u>Lorem ipsum dolor sit amet.</u></p></div>  
+                    </div>
+                </div>
+            </div>
+            </div>
+    </main>
+</body>
+</html>
