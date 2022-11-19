@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assingnment02</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        #nav{
+            margin:5px;
+            padding:5px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: rgba(128, 128, 128, 0.553);
+        }
+        .logo,.navbar{ 
+            margin:10px;
+            padding:10px;
+        }
+        .logo
+        {
+            flex-grow:3;
+            margin-left: 40px;
+            border: 2px solid black;
+        }
+        .navbar{
+            flex-grow:6;
+        }
+        ul>li>a{
+            text-decoration: none;
+            color: black;
+            font-style: bold;
+            font-size: 30px;
+            margin: 20px;
+            padding: 5px 20px;
+            border: 1px solid transparent;
+            
+        }
+        .navbar>ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            align-items:flex-end;
+            justify-content: end;
+            flex-wrap: wrap;
+        }
+        .container {
+            position: relative;
+            text-align: center;
+            color: rgb(34, 19, 19);
+          }
+
+          .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          .bottom {
+            position: absolute;
+            bottom: 85px;
+            left: 580px;
+          }
+          .bottom-right {
+            position: absolute;
+            bottom: 70px;
+            left: 750px;
+          }
+          .container1{
+            margin-top: 0px;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: rgba(83, 80, 80, 0.753);
+          }
+          .container1>p{
+            color: white;
+            margin: 10px;
+            padding: 10px;
+            font-size: 30px;
+          }
+          .container2{
+            display: flex;
+          }
+          .container2>.div1,.div2{
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+            background-color: rgba(133, 56, 56, 0.568);
+          }
+          footer{
+            background:rgba(83, 80, 80, 0.753);
+            padding: 20px;
+            font-size: 30px;
+            display: flex;
+            flex-wrap: wrap;
+          }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="nav">
+            <div class="logo"><h2>Logo</h2></div>
+             <div class="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+             </div>
+        </div>
+    </section>
+
+        <div class="container">
+            <img src="./Assets/img.jpg" alt="" height="300px" width="100%">
+            <div class="centered"><h1>Welcome to the Beach</h1></div>
+            <div class="bottom-right"><button>Read More</button></div>          
+        </div>
+        <div class="container1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam reiciendis eius, porro ipsa nemo accusantium atque deleniti harum earum enim illum dicta repellendus animi, dolores debitis sint odio soluta doloribus quia, saepe officia? Error non ea doloremque sequi optio minima quos earum iste at! Voluptates vel voluptatem consectetur necessitatibus, repudiandae cum placeat! Dicta quis provident a voluptatem velit voluptates veniam ex necessitatibus obcaecati corporis unde assumenda pariatur quasi nisi sapiente fugiat perferendis sunt eligendi ab totam, eum praesentium. Earum fugiat nulla porro illum exercitationem! Vero incidunt ratione inventore, doloribus enim blanditiis, dignissimos, neque corporis sit numquam tenetur atque minus hic.</p>
+        </div>
+        <div class="container2">
+            <div class="div1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt odit dicta laboriosam excepturi labore esse neque reiciendis voluptatum ea ipsam omnis voluptates delectus unde, autem perspiciatis. Qui doloribus a incidunt sequi autem delectus commodi deleniti repellendus consequatur amet non porro cum suscipit, placeat, dolor odit perspiciatis nihil et nostrum expedita.</div>
+
+            <div class="div2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error a illo nihil expedita sunt magni adipisci sit iusto odit facilis. Dignissimos, sint consequatur! Consequuntur doloremque error ut deserunt nobis consequatur delectus incidunt nemo vel sint quaerat tenetur voluptates autem ullam, omnis asperiores mollitia rem harum illum velit. Laudantium, magnam iusto.</div>
+        </div>
+
+        <footer>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores iusto enim, sunt harum assumenda iste deserunt reprehenderit? Delectus id a quisquam mollitia repellat numquam iste odit harum eum qui fugiat et aut cupiditate consequuntur quod doloribus accusantium animi odio dolorum dolor labore deleniti, debitis quae! Enim esse dignissimos quasi optio?
+        </footer>
+</body>
+</html>
