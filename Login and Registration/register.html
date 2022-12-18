@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .content{
+            border: 2px solid black;
+            margin: 80px;
+            width: 500px;
+            height: 440px;
+            margin-left: 400px;
+        }
+        .header{
+            background-color:black;
+            align-items: center;
+            overflow: auto;
+            padding: 10px;
+        }
+        .header>h2{
+            color: white;
+            font-size: 40px;
+            font-style: bold;
+        }
+        .container{
+            padding: 20px;
+            margin: 10px;
+            padding: 30px;
+            align-items: center;
+        }
+        label,input{
+            font-size:20px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-style: bold;
+            margin: 5px;
+        }
+        button{
+            margin-top: 5px;
+            margin-left:5px;
+            padding: 5px;
+            width: 400px;
+            background-color: green;
+            color: white;
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-style: bold;
+        }
+        a{
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin: 10px;
+            margin-left: 40px;
+            font-style: bold;
+        }
+        .container>.email{
+            margin-left: 5px;
+        }
+    </style>
+
+</head>
+<body>
+    <form>
+        <div class="content">
+            <div class="header"><h2>Register Here</h2></div>
+            
+            <div class="container">
+                <label>Username:</label>
+                <input type="text" name="username"><br><br>
+
+                <label>Email ID: </label>
+                <input style="margin-left:15px;" type="email" name="email"><br><br>
+
+                <label>Password:</label>
+                <input name="Password"><br><br>
+
+                <button type="submit"><b>Register</b></button><br><br>
+    
+            </div>
+        </div>
+    </form>
+</body>
+</html>
