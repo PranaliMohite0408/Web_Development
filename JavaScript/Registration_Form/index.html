@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+    .panel-primary> .panel-heading{
+                    color:white;
+                    background-color: #00008B;
+                }
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row col-md-6 col-md-offset-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h1>Registration Form</h1>
+                </div>
+
+                <div class="panel-body">
+                    <form method="post" id="myform" name="Registration">
+                        <div class="form-group">
+                            <label for="FName">Full Name</label>
+                            <input  id="FName" name="FName" class="form-control">
+                            <div id="nameError" class="form-text error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mobno">Mobile Number</label>
+                            <input id="mobno" name="mobno" class="form-control">
+                            <div id="MobNoError" class="form-text error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email ID</label>
+                            <input id="email" name="email" class="form-control">
+                            <div id="EmailError" class="form-text error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Gender</label><br>
+                            <label for="male" class="radio-inline"><input type="radio" name="gender" id="male">Male</label>
+
+                            <label for="female" class="radio-inline"><input type="radio" name="gender" id="female">Female</label>
+
+                            <label for="others" class="radio-inline"><input type="radio" name="gender" id="others">Others</label>
+                            <div id="GenderError" class="form-text error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Languages</label><br>
+
+                            <label for="eng" class="checkbox-inline"><input type="checkbox" id="eng" name="lang">English</label>
+
+                            <label class="checkbox-inline" for="hindi"><input type="checkbox" id="hindi" name="lang">Hindi</label>
+
+                            <label class="checkbox-inline" for="mar"><input  type="checkbox" id="mar" name="lang" >Marathi</label>
+
+                            <div id="LanguageError" class="form-text error"></div>
+                        </div>
+                        
+                        <button type="button" onclick="Validation()" style="background-color:#8B4000;" class="btn btn-primary btn-lg">Submit</button>
+                        
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+   
+        function DisplayError(ElementId,ShowTextError)
+        {
+            var x = document.getElementById(ElementId);
+            x.style.color = "Red";
+            x.innerHTML = ShowTextError;
+        }
+
+        function Validation()
+        {
+            var name =  document.Registration.FName.value;
+            var mobno = document.Registration.mobno.value;
+            var email = document.Registration.email.value;
+            var gender = document.Registration.gender.value;
+
+            var nameError = MobNoError = EmailError = GenderError = LanguageError = true;
+
+            var SelectLanguages = [];
+            var SelectedCheckboxes = document.getElementsByName("lang");
+
+            let Count = 0;
+
+            for (let i = 0; i < SelectedCheckboxes.length; i++) {
+                if (SelectedCheckboxes[i].checked) {
+                    SelectLanguages.push(SelectedCheckboxes[i].value);
+                    Count++;
+                }
+            }
+
+            //name validation
+            if(name == "")
+            {
+                DisplayError("nameError","Please Enter Your Name");
+            }
+            else
+            {
+                var regex = /^[a-zA-Z\s]+$/;
+
+                if (regex.test(name) === false) 
+                {
+                    DisplayError("nameError", "Please Enter Valid Name");
+                }
+                else 
+                {
+                    DisplayError("nameError", "");
+                    nameError = false;
+                }
+
+            }
+
+            //mobno validation
+
+            if(mobno == "")
+            {
+                DisplayError("MobNoError","Please Enter Your Mobile Number");
+            }
+            else
+            {
+               var regex = /^[1-9]\d{9}$/;
+               if(regex.test(mobno) == false)
+               {
+                    DisplayError("MobNoError","Please Enter Valid Mobile Number");
+               } 
+               else
+               {
+                    DisplayError("MobNoError","");
+                    MobNoError = false;
+               }
+
+            }
+
+            //Email validation
+            if(mobno == "")
+            {
+                DisplayError("EmailError","Please Enter Your Email ID");
+            }
+            else
+            {
+               var regex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+               if(regex.test(email) == false)
+               {
+                    DisplayError("EmailError","Please Enter Valid Email");
+               } 
+               else
+               {
+                    DisplayError("EmailError","");
+                    EmailError = false;
+               }
+
+            }
+
+            //gender Validation
+            if(gender == "")
+            {
+                DisplayError("GenderError","Please Select Your Gender");
+            }
+            else
+            {
+                DisplayError("GenderError","");
+                GenderError = false;
+            }
+
+            //languages validation
+            console.log(Count)
+            if(Count === 0)
+            {
+                DisplayError("LanguageError", "Language Required");     
+            }
+            else
+            {
+                DisplayError("LanguageError", "");
+                LanguageError = false;
+            }
+
+            if((nameError && MobNoError && EmailError && GenderError && LanguageError) === false)
+            {
+                var Data = "Your Entered Data \n " + `Name : ${name}\n Email: ${email} \n MobileNo: ${mobno}\n Gender: ${gender} \n `;
+                if(Count>0)
+                {
+                    Data = Data + `Languages : ${SelectLanguages.join(",")}`;
+                }
+                window.alert(Data);
+            }
+        }
+        /*
+        if((nameError && MobNoError && EmailError && GenderError && LanguageError) === false)
+        {
+            var Data = "Your Entered Data : \n " + `Name : ${name}\n Email: ${email} \n MobileNo: ${mobno}\n Gender: ${gender} \n `;
+            if(Count>0)
+            {
+                Data = Data + `Languages : ${SelectLanguages.join(",")}`;
+            }
+            window.alert(Data);
+        }
+*/
+
+        // if((nameError && MobNoError && EmailError && GenderError && LanguageError) === false){
+        //         var YourSubmitedData = "Your Entered Data : \n" + `Name :${name}\n Email : ${email}\n Mobile : ${mobno}\n Gender : ${gender}\n`;
+
+        //         if(Count > 0){
+        //             YourSubmitedData += `Languages : ${SelectLanguages.join(", ")}`;
+        //         }
+        //         window.alert(YourSubmitedData);
+        //     }
+        
+    </script>
+</body>
+</html>
