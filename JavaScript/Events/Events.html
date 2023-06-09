@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different Event Types in JavaScript</title>
+</head>
+<body style="text-align: center;">
+   <div>
+        <a href="#"  onclick="alert('Hello')">
+            <span>Simple Inline alert</span>
+        </a>
+   </div><br><br>
+
+   <div>
+        <a href="#" onclick="callingfunction()">
+            <span>By Calling Function</span>
+        </a>
+   </div>
+   <br><br>
+
+   <div>
+        <a href="#"  type="button" id="data">
+            <span>Inline Event</span>
+        </a>
+   </div></br></br>
+
+   <div>
+    <a href="#"  type="button" id="data1">
+        <span>Event Listeners</span>
+    </a>
+</div>
+
+   <script>
+
+    //Second Way
+    function callingfunction()
+    {
+        alert('Hello');
+    }
+    //Third Way
+    const data = document.getElementById('data');
+    data.onclick = function(){
+        alert("Hello")
+    }
+
+    //fourth Way
+    const data1 = document.querySelector('#data1');
+    data1.addEventListener('click',() => {
+        alert("Hello")
+    })
+
+</script>
+
+</body>
+</html>
