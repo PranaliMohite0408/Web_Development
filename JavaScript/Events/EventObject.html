@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object in JS</title>
+</head>
+<body style="text-align: center;">
+    <div>
+        <a href="#" id="demo">
+            <span>Event Listeners</span>
+        </a>
+    </div>
+
+    <script>
+        const demo = document.getElementById('demo');
+
+        const checkEvent = () =>{
+            console.log(event);
+            console.log(event.target);
+            console.log(event.type);
+        }
+
+        demo.addEventListener('click', checkEvent);
+    </script>
+</body>
+</html>
