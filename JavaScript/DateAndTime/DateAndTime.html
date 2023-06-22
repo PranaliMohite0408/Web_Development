@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Click The Button to Display  Date and Time</p>
+
+    <button onclick="gun()">Try It</button>
+
+    <p id="date"></p>
+
+    <p id="demo"></p>
+
+    
+
+    <script>
+        // function myfunction()
+        // {
+        //     var t = new Date()
+
+        //     t.setHours(5);
+
+        //     document.getElementById("demo").innerHTML = t;
+        // }
+        
+        
+        function gun()
+        {
+            // var t = new Date().toLocaleTimeString();
+            // document.getElementById("demo").innerHTML = t;
+
+            (function()
+            {
+                setInterval(() => {
+                    var d = new Date().toLocaleTimeString();
+                    document.getElementById("demo").innerHTML = d;
+                }, 1000);
+            })();
+
+            var d = new Date().toLocaleDateString();
+            document.getElementById("date").innerHTML = d;
+        }
+
+       
+
+        
+
+
+    </script>
+</body>
+</html>
