@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>A Function is Triggered when the user is pressing a kay in the input field</p><br/>
+        <input type="text" onkeypress="keyPress()" onkeydown="keyDown()" onkeyup="keyUp()"><br/>
+        <p id="keys"></p>
+    </div>
+
+    <script>
+        const keyPress = () =>{
+            document.getElementById('keys').innerHTML = `You Press   ${event.key} and its code is   ${event.code} ` ;
+        }
+
+        const keyDown = () =>{
+            document.getElementById('keys').innerHTML = `key is Down`; //when you click backslash to delete the it will run
+        }
+
+        const keyUp = () =>{
+            document.getElementById('keys').innerHTML = `key is Up`; //when we click backslah to delete then it will run
+        }
+
+    </script>
+</body>
+</html>
