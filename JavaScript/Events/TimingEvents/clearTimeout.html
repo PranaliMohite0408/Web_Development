@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clearTimeout Event</title>
+</head>
+<body style="text-align: center;">
+    <div>
+        <p>Click "Try It". wait 3 seconds, The Page will alert "Hello"</p>
+        <p>Click "Stop" to Prevent the First Function to Execute</p>
+        <p>(Your Must click "Stop" before the 2 seconds are up)</p>
+
+        <button onclick="myVar = setTimeout(myFunction, 2000)">Try It</button>
+
+        <button onclick="clearTimeout(myVar)">Stop IT</button>
+    </div>
+
+
+    <script>
+        function myFunction()
+        {
+            alert("Hello");
+        }
+    </script>
+</body>
+</html>
