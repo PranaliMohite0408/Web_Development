@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <p>Can you stop me when I reach at 5 ?</p>
+    <br>
+    <button id="btn">Strat</button>
+    <button id="btn1">Stop</button>
+
+    <script>
+        const data = document.querySelector('p');
+        const btn = document.querySelector('#btn');
+        const stopInterval = document.querySelector('#btn1');
+
+        let timeRef = 0;
+        let num=0;
+
+        const demo = () =>
+        {
+            data.innerHTML = "Loading..."
+            timeRef = setInterval(() => {
+                data.innerHTML = ` ${num} `
+                num++;
+            }, 1000);
+        }
+
+        btn.addEventListener('click',demo);
+
+        stopInterval.addEventListener('click',() =>{
+            clearInterval(timeRef);
+        })
+    </script>
+</body>
+</html>
