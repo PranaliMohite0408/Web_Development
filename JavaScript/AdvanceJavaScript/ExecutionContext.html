@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Execution Context</title>
+</head>
+<body>
+    
+
+    <script>
+
+        debugger;
+        var MyData = "Execution Context";
+
+       function fun(){
+        debugger;
+            console.log("Inside Fun()");
+            gun();
+            console.log("End Fun()");
+       }
+
+       function gun(){
+        debugger;
+             console.log("Inside gun()");
+             sun();
+             console.log("Ending gun()");
+       }
+
+       function sun(){
+        debugger;
+            console.log("Inside Sun()");
+            var x = 10;
+            console.log("Ending sun()");     
+       }
+
+       debugger;
+       fun();
+
+
+
+        /* 
+ 
+    Execution Context 
+      
+       1. Creation Phase           2. Execution Phase
+            - Variable object          line by line run 
+                  or 
+              function Object     
+
+ */
+    </script>
+</body>
+</html>
