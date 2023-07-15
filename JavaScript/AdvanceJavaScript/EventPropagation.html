@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .parentDiv{
+            margin: auto;
+            margin-top: 100px;
+            width: 500px;
+            height: 500px;
+            padding: 20px;
+            background-color: aqua;
+            border: 2px solid black;
+        }
+        .childDiv{
+            margin: 80px;
+            margin-top: 120px;
+            padding: 20px;
+            width:300px;
+            height:200px;
+            background-color: azure;
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parentDiv" id="parentId">
+        <div class="childDiv" id="childId"></div>
+    </div>
+
+    <script>
+        const parentId = document.getElementById('parentId');
+        const childId = document.getElementById('childId');
+
+        const parentCall = () =>{
+            alert('Parent Div Call');
+            console.log('Parent Div Call');
+        }
+
+        const childCall = () =>{
+            alert('child Div Call');
+            console.log('Child Div Call')
+            //event.stopPropagation();
+        }
+
+        // parentId.addEventListener('click',parentCall); //Bubbling Phase
+        // childId.addEventListener('click',childCall); //Bubbling Phase
+
+        parentId.addEventListener('click',parentCall, true); //Capture Phase
+        childId.addEventListener('click',childCall, true); //Capture Phase
+
+    </script>
+</body>
+</html>
