@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Call</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="container">
+
+    </div> 
+
+    <script>
+        const container = document.querySelector('#container');
+
+        const request = new XMLHttpRequest();
+        request.open('GET',"https://restcountries.com/v3.1/name/india");
+        request.send();
+
+        //to get the response
+
+        request.addEventListener('load',function()
+        {
+            const [data] = JSON.parse(this.responseText);
+            console.log(data.capital);
+
+            const htmlData = `
+            <img src="${data.flags.png}" alt="">
+            <h1>${data.name}</h1>
+            <p>Capital: ${data.capital}</p>
+            <p>Population: ${data.population}</p>
+        `;
+        
+        //container.innerHTML = htmlData;
+
+        container.insertAdjacentHTML('afterbegin',htmlData)
+        })
+    </script>
+</body>
+</html>
