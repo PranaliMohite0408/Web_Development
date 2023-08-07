@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin in CSS</title>
+    <style>
+        /*
+            margin-top
+            margin-right
+            margin-bottom
+            margin-left
+
+            margin-top, margin-right, margin-bottom, margin-left = margin
+            inherit - specifies that the margin should be inherited from the parent element
+            auto - the browser calculates the margin
+        */
+
+        div >p{
+            margin-top: 20px;
+            margin-bottom: 40px;
+            margin-left: 75px;
+            margin-right: 50px;
+        }
+        .div1{
+            margin:20px 40px 50px 30px;
+        }
+        .div2{
+            border: 2px solid red;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+
+        /*
+         parent <div> has a margin of 20px. By setting margin: inherit; on the child <div>, 
+        it will inherit the margin value from its parent. So, the child <div> will also have a margin of 20px.*/
+
+        .parent{
+            width: 100px;
+            height: 100px;
+            border: 2px solid blue;
+            margin: 20px;
+        }
+        .child{
+            width: 50px;
+            height: 50px;
+            border: 2px solid orange;
+            margin: 20px;
+            margin: inherit;
+        }
+
+    </style>
+</head>
+<body>
+    <div><p>Hello World</p></div>
+
+    <div class="div1">Margin Short-hand Property</div>
+
+    <div class="div2"></div>
+
+    <div class="parent">
+        <div class="child">Hello World</div>
+    </div>
+</body>
+</html>
