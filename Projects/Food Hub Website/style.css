@@ -1,0 +1,276 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    font-family: 'Roboto',sans-serif;
+    background-color: black;
+    color: white;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding:33px;
+    box-shadow: 0px 1px 5px 0px rgb(235, 230, 230);
+}
+.logo h1{
+    font-size: 37px;
+    color: rgb(255, 106,0);
+    margin-top: -2px;
+}
+.icon{
+    margin-left: -11px;
+}
+.icon i{
+    font-size: 22px;
+    margin-inline: 8px;
+    background-color: white;
+    color: black;
+    padding: 11px;
+    border-radius: 2px;
+}
+
+nav input{
+    width: 600px;
+    padding:9px;
+    height: 20px;
+    border: none;
+    outline:none;
+    font-size: 18px;
+    border-radius: 2px;
+}
+.icon i:hover{
+    color: orange;
+    cursor: pointer;
+}
+.input i{
+    margin-left: -28px;
+    color: black;
+    font-size: 20px;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+.main img{
+    width: 33%;
+    margin-top: 33px;
+}
+.main .text{
+    width:500px;
+    margin-top:62px;
+}
+.text h1{
+    font-size: 66px;
+}
+.text p{
+    color: #f6f5f5;
+    margin-top: 22px;
+}
+.text button{
+    margin-top: 24px;
+    border: none;
+    outline: none;
+    background-color:rgb(255, 119, 0);
+    color: white;
+    font-size: 22px;
+    width: 160px;
+    height: 40px;
+}
+.crd{
+    display: flex;
+    /* justify-content: center; */
+    margin-left:115px;
+    color:black
+}
+.crd .card{
+    width: 300px;
+    background-color: white;
+    border-radius: 4px;   
+    padding: 11px;
+    color: black; 
+    margin-inline: 11px;
+    margin-top: 84px;
+}
+.card > img{
+    width:100%;
+}
+.card h2{
+    margin-top: 12px;
+}
+.card p{
+    margin-top: 12px;
+}
+.card button{
+    margin-top: 25px;
+    border: none;
+    outline: none;
+    background-color:rgb(255, 119, 0);
+    color: white;
+    font-size: 22px;
+    width: 140px;
+    height: 38px;
+}
+
+.blog{
+    width: 300px;
+    height: 360px;
+    background-color: white;
+    border-radius: 4px;   
+    padding: 11px;
+    color: black; 
+    margin-inline: 11px;
+    margin-top: 84px;
+}
+.blog h2{
+    margin-top: 12px;
+}
+.blog p{
+    margin-top: 12px;
+}
+.blog a{
+    position: relative;
+    top:30px;
+    width: 160px;
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    font-size:20px ;
+    border-radius: 2px;
+}
+.blog img{
+    width: 100%;
+}
+.review{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin: auto;
+    width:850px;
+    height:700px;
+    margin-top: 63px;
+}
+.review .customer{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    padding: 12px;
+    text-align: center;
+    background-color: #fff;
+    color: black;
+    transition: 0.5s ease;
+}
+.customer img{
+    width: 33%;
+    border-radius:100%;
+}
+.customer i{
+    font-size: 22px;
+    color: orange;
+    margin-top: 11px;
+}
+.head h1{
+    text-align: center;
+    font-size: 44px;
+    margin-top: 53px;
+    margin-left: 22px;
+}
+.head span{
+    color: orange;
+}
+.btn{
+    text-align: center;
+}
+.btn button{
+    width: 140px;
+    height: 38px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 20px;
+    margin-inline: 11px;
+    background-color: orange;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 55px;
+    margin-top: 77px;
+    color: black;
+}
+.footer .txt{
+    color: black;
+}
+.txt p{
+    margin-top: 12px;
+}
+
+/*Login */
+.login{
+    display: none;
+    position: absolute;
+    margin-left: 81%;
+    width: 200px;
+    padding: 22px;
+    background-color: white;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 6px;
+}
+.login h2{
+    color: black;
+}
+.login input{
+    border: none;
+    border-bottom: 2px solid black;
+    width: 160px;
+    font-size:18px;
+    padding: 8px;
+    margin-top: 13px;
+}
+.login button{
+    width: 140px;
+    height: 35px;
+    border: none;
+    outline: none;
+    background-color: orange;
+    color: white;
+    border-radius: 2px;
+    font-size: 18px;
+    margin-top: 22px;
+}
+
+/*nav*/
+
+.nav {
+    display: none;
+    position: absolute;
+    margin-left: 81%;
+    width: 160px;
+    padding: 22px;
+    background-color: white;
+    border-radius: 4px;
+    margin-top: 6px;
+}
+.nav p a{
+    width: 110px;
+    color: black;
+    margin-left: 20%;
+    padding: 15px;
+    margin: 10px;
+    font-size: 15px;
+    
+    border-radius: 4px;
+    
+}
+.nav p a:hover{
+    background-color:rgb(212, 205, 205);
+    color: orange;
+    cursor: pointer;
+    padding: 10px;
+}
