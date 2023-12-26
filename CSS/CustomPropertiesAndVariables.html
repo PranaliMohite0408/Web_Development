@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Custome Properties/ Variables </title>
+    <style>
+        :root{
+            --data1:blue;
+            ---data2:red;
+            --data3:orange;
+            --data4:green;
+            --data5:black;
+            --data6:yellow;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: var(--data1);
+            border: 5px solid var(--data2);
+            box-shadow: 4px 4px var(--data3);
+            margin : 2px 9px;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: var(--data4);
+            border: 5px solid var(--data2);
+            box-shadow: 4px 5px var(--data3);
+            margin : 2px 9px;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: var(--data5);
+            border: 5px solid var(--data2);
+            box-shadow: 6px 10px var(--data3);
+            margin : 2px 9px;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: var(--data6);
+            border: 5px solid var(--data2);
+            box-shadow: 3px 3px var(--data3);
+            margin : 2px 9px;
+        }
+        .container{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>
